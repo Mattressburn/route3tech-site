@@ -179,7 +179,7 @@ img{ max-width: 100%; height: auto; display:block; }
   position:absolute;
   inset:0;
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.90)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.92)),
     url("/assets/route3tech-cover.png");
   background-size: cover;
   background-position: center;
@@ -192,13 +192,18 @@ img{ max-width: 100%; height: auto; display:block; }
   align-items:center;
   min-height: 420px;
 }
-.hero-card{
+.hero-card {
   width: min(720px, 100%);
   padding: clamp(18px, 3vw, 28px);
   border-radius: var(--radius2);
-  border: 1px solid rgba(255,255,255,0.10);
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-  box-shadow: var(--shadow);
+
+  /* Softer treatment */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(10px);
+
+  /* Reduce the “panel” look */
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
 .hero-logo{
   width: 112px;
