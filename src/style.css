@@ -12,7 +12,9 @@
   --muted: rgba(255,255,255,0.72);
   --muted2: rgba(255,255,255,0.58);
   --line: rgba(255,255,255,0.12);
-  --accent: rgba(210, 220, 255, 0.95);
+  --accentCool: rgba(166, 192, 255, 0.95);
+  --accentWarm: rgba(240, 200, 150, 0.8);
+  --accentGlow: rgba(120, 170, 255, 0.35);
   --shadow: 0 10px 30px rgba(0,0,0,0.35);
   --radius: 18px;
   --radius2: 26px;
@@ -179,12 +181,12 @@ img{ max-width: 100%; height: auto; display:block; }
   position:absolute;
   inset:0;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.92)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7)),
     url("/assets/route3tech-cover.png");
   background-size: cover;
   background-position: center;
   filter: grayscale(100%) contrast(110%);
-  opacity: 0.55;
+  opacity: 0.9;
 }
 .hero-inner{
   position:relative;
@@ -193,17 +195,25 @@ img{ max-width: 100%; height: auto; display:block; }
   min-height: 420px;
 }
 .hero-card {
-  width: min(720px, 100%);
+  position: relative;
+  width: min(620px, 100%);
   padding: clamp(18px, 3vw, 28px);
   border-radius: var(--radius2);
-
-  /* Softer treatment */
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  background: rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(10px);
-
-  /* Reduce the “panel” look */
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  background: transparent;
+}
+.hero-card::before{
+  content: "";
+  position: absolute;
+  inset: -14px -16px -14px -16px;
+  border-radius: calc(var(--radius2) + 10px);
+  background:
+    radial-gradient(120% 120% at 10% 0%, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2) 45%, transparent 72%),
+    linear-gradient(120deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) 55%, transparent 85%);
+  z-index: 0;
+}
+.hero-card > *{
+  position: relative;
+  z-index: 1;
 }
 .hero-logo{
   width: 112px;
@@ -214,11 +224,13 @@ img{ max-width: 100%; height: auto; display:block; }
   margin: 0;
   font-size: clamp(34px, 5vw, 52px);
   letter-spacing: 0.2px;
+  text-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 .hero-tagline{
   margin: 8px 0 10px;
   font-size: clamp(18px, 2.6vw, 22px);
-  color: var(--accent);
+  color: var(--accentCool);
+  text-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
 .hero-subhead{
   margin: 0 0 18px;
@@ -250,6 +262,13 @@ img{ max-width: 100%; height: auto; display:block; }
   display:grid;
   gap: 10px;
   margin-bottom: 22px;
+}
+.section-head::after{
+  content: "";
+  width: 72px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accentCool), transparent);
+  opacity: 0.65;
 }
 .section-head h2{
   margin: 0;
@@ -329,7 +348,11 @@ img{ max-width: 100%; height: auto; display:block; }
 .btn.primary:hover{
   text-decoration:none;
   background: rgba(255,255,255,0.99);
-  box-shadow: 0 0 0 6px rgba(210,220,255,0.10);
+  box-shadow: 0 0 0 6px var(--accentGlow);
+}
+.btn:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 4px var(--accentGlow);
 }
 .btn.ghost{
   color: var(--text);
@@ -438,8 +461,8 @@ input, textarea, select{
   outline: none;
 }
 input:focus, textarea:focus, select:focus{
-  border-color: rgba(210,220,255,0.55);
-  box-shadow: 0 0 0 4px rgba(210,220,255,0.10);
+  border-color: rgba(166, 192, 255, 0.55);
+  box-shadow: 0 0 0 4px var(--accentGlow);
 }
 .field-row{
   display:grid;
@@ -471,7 +494,7 @@ input:focus, textarea:focus, select:focus{
 }
 .badge-title{
   display:block;
-  color: var(--muted2);
+  color: var(--accentWarm);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
