@@ -198,8 +198,8 @@ img{ max-width: 100%; height: auto; display:block; }
   border-radius: var(--radius2);
 
   /* Softer treatment */
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(10px);
 
   /* Reduce the “panel” look */
