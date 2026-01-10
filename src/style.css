@@ -119,6 +119,62 @@ img{ max-width: 100%; height: auto; display:block; }
   padding: 8px 10px;
   border-radius: 10px;
 }
+.nav .nav-phone{
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+}
+.nav .nav-phone:hover{
+  color: var(--accentCool);
+  background: rgba(255,255,255,0.12);
+}
+.nav-dropdown{
+  position: relative;
+}
+.nav-dropdown summary{
+  list-style: none;
+  cursor: pointer;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.nav-dropdown summary::-webkit-details-marker{
+  display: none;
+}
+.nav-dropdown summary:hover{
+  color: var(--accentCool);
+  text-decoration: none;
+  background: rgba(255,255,255,0.06);
+}
+.nav-dropdown[open] summary{
+  color: var(--accentCool);
+  background: rgba(255,255,255,0.06);
+}
+.nav-dropdown-menu{
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  display: grid;
+  gap: 4px;
+  min-width: 210px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(10,10,12,0.98);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  z-index: 10;
+}
+.nav-dropdown-menu a{
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--muted);
+}
+.nav-dropdown-menu a:hover{
+  color: var(--accentCool);
+  text-decoration: none;
+  background: rgba(255,255,255,0.06);
+}
 .nav a:hover{
   color: var(--accentCool);
   text-decoration: none;
@@ -162,6 +218,20 @@ img{ max-width: 100%; height: auto; display:block; }
   gap: 6px;
   padding: 12px 0 16px;
 }
+.mobile-nav-group{
+  display: grid;
+  gap: 6px;
+  padding-top: 8px;
+  margin-top: 6px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.mobile-nav-label{
+  padding: 4px 12px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 .mobile-nav a{
   color: var(--muted);
   padding: 10px 12px;
@@ -200,7 +270,9 @@ img{ max-width: 100%; height: auto; display:block; }
   height: clamp(220px, 34vw, 380px);
   transform: translateY(-50%);
   background: url("/assets/route3tech-logo-neon.png") no-repeat center / contain;
-  opacity: 0.06;
+  opacity: 0.05;
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%);
+  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%);
   pointer-events: none;
   z-index: 0;
 }
