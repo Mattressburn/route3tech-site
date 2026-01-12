@@ -113,16 +113,19 @@ img{ max-width: 100%; height: auto; display:block; }
   align-items:center;
   gap: 16px;
   font-size: 14px;
+  flex-wrap: nowrap;
 }
 .nav a{
   color: var(--muted);
   padding: 8px 10px;
   border-radius: 10px;
+  white-space: nowrap;
 }
 .nav .nav-phone{
   color: var(--text);
   border: 1px solid rgba(255,255,255,0.2);
   background: rgba(255,255,255,0.08);
+  white-space: nowrap;
 }
 .nav .nav-phone:hover{
   color: var(--accentCool);
@@ -137,6 +140,7 @@ img{ max-width: 100%; height: auto; display:block; }
   color: var(--muted);
   padding: 8px 10px;
   border-radius: 10px;
+  white-space: nowrap;
 }
 .nav-dropdown summary::-webkit-details-marker{
   display: none;

@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Route 3 Tech | Wi-Fi, PC help, backups, and small office IT near Lowell</title>
-  <meta name="description" content="Calm, practical tech help for home and small business. Wi-Fi fixes, PC and Mac tune-ups, backups, and small office IT. Serving Lowell and the Route 3 corridor." />
+  <title>Route 3 Tech | Tech support, Wi-Fi, and computer help in Lowell MA</title>
+  <meta name="description" content="Route 3 Tech provides tech support, computer help, Wi-Fi and home network fixes, PC and Mac tune-ups with backup, remote sessions, and small business IT for Lowell, Chelmsford, Burlington, and Nashua along the Route 3 corridor." />
+  <link rel="canonical" href="https://www.route3tech.com/" />
+  <meta property="og:title" content="Route 3 Tech | Tech support, Wi-Fi, and computer help in Lowell MA" />
+  <meta property="og:description" content="Route 3 Tech provides tech support, computer help, Wi-Fi and home network fixes, PC and Mac tune-ups with backup, remote sessions, and small business IT for Lowell, Chelmsford, Burlington, and Nashua along the Route 3 corridor." />
+  <meta property="og:url" content="https://www.route3tech.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.route3tech.com/assets/route3tech-logo-neon.png" />
   <meta name="theme-color" content="#0a0a0a" />
 
   <link rel="icon" href="/assets/route3tech-logo-neon.png" />
@@ -18,7 +24,8 @@
     "name": "Route 3 Tech",
     "description": "Calm, practical tech help for home and small business. Wi-Fi and home network fixes, PC and Mac tune-ups with backup setup, remote help, and small office IT support.",
     "image": "/assets/route3tech-logo-neon.png",
-    "url": "",
+    "url": "https://www.route3tech.com/",
+    "telephone": "+13392987387",
     "email": "book@route3tech.com",
     "address": {
       "@type": "PostalAddress",
@@ -27,16 +34,27 @@
       "addressCountry": "US"
     },
     "areaServed": [
-      "Lowell, MA",
-      "Chelmsford, MA",
-      "Burlington, MA",
-      "Nashua, NH",
-      "Route 3 corridor"
+      {
+        "@type": "City",
+        "name": "Lowell, MA"
+      },
+      {
+        "@type": "City",
+        "name": "Chelmsford, MA"
+      },
+      {
+        "@type": "City",
+        "name": "Burlington, MA"
+      },
+      {
+        "@type": "City",
+        "name": "Nashua, NH"
+      }
     ]
   }
   </script>
-  <script type="module" crossorigin src="/assets/index-BnParhcM.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Bv0iQoqp.css">
+  <script type="module" crossorigin src="/assets/main-B4bsVan5.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CUYFu8zS.css">
 </head>
 
 <body>
@@ -53,8 +71,17 @@
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#area">Service area</a>
+        <details class="nav-dropdown">
+          <summary>Local help</summary>
+          <div class="nav-dropdown-menu">
+            <a href="/wifi-help-lowell/">Wi-Fi help in Lowell</a>
+            <a href="/computer-help-lowell/">Computer help in Lowell</a>
+          </div>
+        </details>
         <a href="#how">How it works</a>
         <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
+        <a class="nav-phone" href="tel:+13392987387">(339) 298-7387</a>
         <a class="nav-cta" href="#contact">Message</a>
       </nav>
 
@@ -68,8 +95,14 @@
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#area">Service area</a>
+        <div class="mobile-nav-group" aria-label="Local help">
+          <span class="mobile-nav-label">Local help</span>
+          <a href="/wifi-help-lowell/">Wi-Fi help in Lowell</a>
+          <a href="/computer-help-lowell/">Computer help in Lowell</a>
+        </div>
         <a href="#how">How it works</a>
         <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
         <a class="nav-cta" href="#contact">Message Route 3 Tech</a>
       </div>
     </div>
@@ -90,10 +123,32 @@
           <div class="hero-actions">
             <a class="btn primary" href="#contact">Message</a>
             <a class="btn ghost" href="#pricing">See pricing</a>
+            <a class="btn ghost" href="#support">Support</a>
           </div>
         </div>
       </div>
     </section>
+    <section id="support" class="section">
+      <div class="container">
+        <h2>Support</h2>
+        <p class="lede">
+          For remote sessions on Windows, download the tool below, open the zip, and run <strong>start.cmd</strong>.
+          Then send me the ID shown in the app.
+        </p>
+    
+        <p>
+          <a class="btn primary" href="/downloads/Route3Tech-RemoteHelp-Windows.zip" download>
+            Download Remote Help (Windows)
+          </a>
+        </p>
+    
+        <p class="fineprint">
+          Text or tell me the code over the phone or zoom session.
+          Close the app when we are done to end the session.
+        </p>
+      </div>
+    </section>
+    
 
     <!-- SERVICES -->
     <section id="services" class="section">
@@ -114,6 +169,7 @@
               <li>Fix dropouts, dead zones, and slow spots</li>
               <li>Secure setup and simple guidance</li>
             </ul>
+            <p class="fineprint"><a href="/wifi-help-lowell/">Wi-Fi help in Lowell</a></p>
           </article>
 
           <article class="card">
@@ -124,6 +180,7 @@
               <li>Updates, cleanup, and basic safety checks</li>
               <li>Set up a backup you can trust</li>
             </ul>
+            <p class="fineprint"><a href="/computer-help-lowell/">Computer help in Lowell</a></p>
           </article>
 
           <article class="card">
@@ -137,14 +194,21 @@
           </article>
 
           <article class="card">
-            <h3>Remote session</h3>
-            <p class="price-tag">$95 flat, 45 to 60 minutes</p>
-            <ul>
-              <li>Great for software issues and quick fixes</li>
-              <li>Walk-through help, step by step</li>
-              <li>If it needs a visit, we will switch to in-person</li>
-            </ul>
+              <h3>Remote session</h3>
+              <p class="price-tag">$95 flat, 45 to 60 minutes</p>
+              <ul>
+                <li>Great for software issues and quick fixes</li>
+                <li>Walk-through help, step by step</li>
+                <li>If it needs a visit, we will switch to in-person</li>
+              </ul>
+            
+              <p class="fineprint">
+                For remote sessions:
+                <a href="/downloads/Route3Tech-RemoteHelp-Windows.zip" download>Download Remote Help (Windows)</a>,
+                then open the zip and run <strong>start.cmd</strong>.
+              </p>
           </article>
+          
         </div>
 
         <div class="callout">
@@ -326,8 +390,7 @@
           <details>
             <summary>What payment do you accept?</summary>
             <p>
-              I will confirm payment options when we schedule. I can send a receipt by email.
-              If you want to list specific methods (cash, check, Venmo, PayPal)
+              I accept cash, card, and electronic payment. I will confirm details when we schedule and can send a receipt by email.
             </p>
           </details>
         </div>
@@ -343,13 +406,16 @@
             The fastest way to reach me is this form or email.
             If you prefer text, include your number and check the box.
           </p>
+          <p>
+            Call or text <a href="tel:+13392987387">(339) 298-7387</a>.
+          </p>
         </header>
 
         <div class="grid contact">
           <form class="card form"
                 name="contact"
                 method="POST"
-                action="/thanks/"
+                action="/thanks/index.html"
                 data-netlify="true"
                 netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
