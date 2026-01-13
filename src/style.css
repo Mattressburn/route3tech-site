@@ -371,6 +371,62 @@ img{ max-width: 100%; height: auto; display:block; }
 .area{ grid-template-columns: 1fr; }
 .trust{ grid-template-columns: 1fr; }
 .contact{ grid-template-columns: 1fr; }
+.meet-matt-grid{
+  display:grid;
+  gap: 24px;
+  align-items:start;
+}
+.meet-matt-media{
+  margin: 0;
+  display:grid;
+  gap: 10px;
+}
+.meet-matt-media img,
+.local-hands img{
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.meet-matt-media figcaption,
+.local-hands figcaption{
+  color: var(--muted2);
+  font-size: 14px;
+}
+.meet-matt-copy p{
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+.meet-matt-intro{
+  font-size: 18px;
+  color: var(--text);
+}
+.meet-matt-lists{
+  display:grid;
+  gap: 16px;
+  margin-top: 8px;
+}
+.meet-matt-lists h3{
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.meet-matt-lists ul,
+.meet-matt-lists ol{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.meet-matt-note{
+  margin-top: 10px;
+  color: var(--muted2);
+}
+.local-hands{
+  display:grid;
+  gap: 16px;
+}
+.local-hands p{
+  margin: 0;
+  color: var(--muted);
+}
 
 .card{
   background: linear-gradient(180deg, var(--card2), var(--card));
@@ -643,6 +699,14 @@ input:focus, textarea:focus, select:focus{
   .trust{ grid-template-columns: repeat(3, 1fr); }
   .contact{ grid-template-columns: 1.2fr 0.8fr; }
   .field-row{ grid-template-columns: 1fr 1fr; }
+  .meet-matt-grid{
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 36px;
+  }
+  .local-hands{
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items:center;
+  }
 }
 
 @media (max-width: 680px){
